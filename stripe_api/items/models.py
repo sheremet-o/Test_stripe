@@ -12,3 +12,6 @@ class Item(models.Model):
     price = models.PositiveIntegerField(
         verbose_name='Стоимость'
     )
+
+    def __str__(self) -> str:
+        return self.name

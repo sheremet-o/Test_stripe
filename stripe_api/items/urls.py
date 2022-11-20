@@ -1,13 +1,9 @@
-from django.urls import include, path
-from rest_framework.routers import DefaultRouter
+from django.urls import path
 
-from .views import ItemsViewSet
-
+from . import views
 app_name = 'items'
 
-api_items_router_v1 = DefaultRouter()
-api_items_router_v1.register(r'items', ItemsViewSet, basename='items')
-
 urlpatterns = [
-    path(r'', include(api_items_router_v1.urls)),
+    path('buy/<int:item_id/', views.item_buy, name='item_buy'),
+    path('item/<int:item_id>', views.item_detail, name='item_detail')
 ]
