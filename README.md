@@ -13,4 +13,3 @@
 `pip install -r requirements.txt`
 4. Из папки stripe_django запустите сервер:  
 `python manage.py runserver`
-готово
